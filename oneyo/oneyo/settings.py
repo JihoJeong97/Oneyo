@@ -11,6 +11,19 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import requests
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import auth
+
+# firebase 경로설정
+cred = credentials.Certificate("C:/my_web/multi_project/semi/firebase/oneyo-f19eb-firebase-adminsdk-a229j-518043a82a.json")
+firebase_admin.credentials.Certificate(cred)
+# firebase 사용자 로그인 처리
+user = auth.get_user_by_email('holly7574@gmail.com')
+user_id = 'firebase-adminsdk-a229j@oneyo-f19eb.iam.gserviceaccount.com'
+# 로그아웃
+auth.logout(requests)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,6 +93,9 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+
+
 
 
 # Password validation
