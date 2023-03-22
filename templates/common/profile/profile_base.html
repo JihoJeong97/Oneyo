@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "common/profile/profile_tabs.html" %}
+
+<div id="profile_base">
+    {% if user == profile.user %}
+        <div class="profile_title">이메일</div>
+        <p class="mb-4">{{ profile.user.email }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}

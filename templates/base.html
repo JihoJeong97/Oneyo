@@ -8,17 +8,31 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
     <!-- oneyo CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9jvYjZEzI7nJq0WY3Uv5K5KRbQ"
+          crossorigin="anonymous">
     <title>Hello, oneyo!</title>
 </head>
 <body>
 <!-- 네비게이션바 -->
-{% include "navbar.html" %}
+    {% include 'navbar.html' %}
+
+    <div class="container mt-5">
+        {% block content %}
+        {% endblock %}
+    </div>
 <!-- 기본 템플릿 안에 삽입될 내용 Start -->
-{% block content %}
-{% endblock %}
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
 <!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popperjs-core.min.js"
+        integrity="sha384-BuQ6UvlGMZBkQzAaQQKlOoEQPBl0bUsye0tJH9bK92+WtJKCZt0eJcC1KjxJhxkr"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9jvYjZEzI7nJq0WY3Uv5K5KRbQ"
+        crossorigin="anonymous"></script>
 <script src="{% static 'bootstrap.min.js' %}"></script>
 </body>
 </html>

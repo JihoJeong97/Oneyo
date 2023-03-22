@@ -1,0 +1,5 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link {% if profile_type == 'base' %}active{% endif %}" href="{% url 'common:profile_base' profile_user.id %}">기본정보</a>
+    </li>
+</ul>
